@@ -28,11 +28,13 @@ jobs:
       - name: Install Capacitor packages
         run: npm ci
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
+      # ubuntu-latest already ships the Android SDK (ANDROID_HOME is set), so
+      # we use its sdkmanager directly instead of android-actions/setup-android,
+      # which is broken on current runner images (it fails on `sdkmanager tools`).
       - name: Install SDK packages
-        run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
+        run: |
+          sdkmanager --install "platforms;android-36" "build-tools;36.0.0"
+          sdkmanager --list_installed | grep -E "platforms;android-36|build-tools;36" || true
 
       # Optional: if the keystore secrets are configured, sign with the real
       # release key; otherwise the build falls back to the debug key.
