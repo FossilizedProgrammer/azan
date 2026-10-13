@@ -1,0 +1,18 @@
+{
+	"appId": "com.azan.scheduler",
+	"appName": "Azan Prayer Scheduler",
+	"webDir": "dist",
+	"server": {
+		"androidScheme": "https"
+	},
+	"android": {
+		"allowMixedContent": true
+	},
+	"plugins": {
+		"LocalNotifications": {
+			"smallIcon": "ic_stat_icon_config_sample",
+			"iconColor": "#7C9A7E",
+			"sound": "beep.wav"
+		}
+	}
+}

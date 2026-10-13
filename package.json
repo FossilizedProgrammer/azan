@@ -1,0 +1,15 @@
+{
+  "name": "azan-scheduler-android",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Android (Capacitor) project for Azan Prayer Scheduler",
+  "dependencies": {
+    "@capacitor/android": "8.5.2",
+    "@capacitor/app": "8.1.1",
+    "@capacitor/core": "8.5.2",
+    "@capacitor/geolocation": "8.2.2",
+    "@capacitor/haptics": "8.0.2",
+    "@capacitor/local-notifications": "8.3.1",
+    "@capacitor/preferences": "8.0.1"
+  }
+}
